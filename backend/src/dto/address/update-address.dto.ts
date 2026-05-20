@@ -1,4 +1,4 @@
-import type { AddressType } from "../types/enums.js";
+import type { AddressType } from "../../types/enums.js";
 
 export interface UpdateAddressDto {
   neighborhood?: string;
