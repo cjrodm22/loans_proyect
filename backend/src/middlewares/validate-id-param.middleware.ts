@@ -13,3 +13,19 @@ export const validateIdParam = (
   req.params.id = String(id);
   next();
 };
+
+export const validateLoanIdParam = (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  const loanId = Number(req.params.loanId);
+
+  if (!Number.isInteger(loanId) || loanId <= 0) {
+    return res.status(400).json({
+      error: "Invalid Loan ID",
+    });
+  }
+
+  next();
+};

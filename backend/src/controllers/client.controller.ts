@@ -1,6 +1,5 @@
 import type { Request, Response } from "express";
 import { ClientService } from "../services/client.service.js";
-import { parseId } from "../utils/parse_id.js";
 
 export class ClientController {
   static async getAllClients(req: Request, res: Response) {

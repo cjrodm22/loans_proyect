@@ -1,6 +1,5 @@
 import type { Request, Response } from "express";
 import { LoanService } from "../services/loan.service.js";
-import { parseId } from "../utils/parse_id.js";
 
 export class LoanController {
   static async getAllLoans(req: Request, res: Response) {
